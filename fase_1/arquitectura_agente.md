@@ -208,7 +208,14 @@ a una alucinación o a una instrucción maliciosa del usuario.
 Asi mismo, la herramienta `generar_etiqueta_devolucion` solamente podrá ejecutarse
 cuando exista una autorización válida.
 
-## 9. Conclusión
+## 9. Diagrama de arquitectura del agente
+
+El siguiente diagrama representa el flujo general de la solución, las decisiones
+del agente y la interacción con las herramientas definidas para EcoMarket.
+
+![Diagrama de arquitectura del agente](Diagrama_Arquitectura_Agente.png)
+
+## 10. Conclusión
 
 La arquitectura propuesta permite evolucionar el sistema desarrollado en los
 talleres anteriores desde un asistente basado en RAG hacia un agente capaz de
