@@ -61,7 +61,7 @@ utilizar los fragmentos como contexto para responder.
 
 Salida: información relevante recuperada desde la base de conocimiento.
 
-# Ejemplo: 
+### Ejemplo: 
 
 Pregunta: "¿Cuál es la política de devolución de alimentos?"
 
