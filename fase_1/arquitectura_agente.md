@@ -213,7 +213,7 @@ cuando exista una autorización válida.
 El siguiente diagrama representa el flujo general de la solución, las decisiones
 del agente y la interacción con las herramientas definidas para EcoMarket.
 
-![Diagrama de arquitectura del agente](Diagrama_Arquitectura_Agentes.png)
+![Diagrama de arquitectura del agente](Diagrama%20Arquitectura%20Agentes.png)
 
 ## 10. Conclusión
 
