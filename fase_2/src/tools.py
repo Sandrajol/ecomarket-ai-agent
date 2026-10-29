@@ -41,7 +41,7 @@ def buscar_producto(producto_id):
     productos = cargar_productos()
 
     producto = productos[
-        productos["Código del producto"].astype(str).str.upper()
+        productos["codigo_producto"].astype(str).str.upper()
         == producto_id.upper()
     ]
 
@@ -108,7 +108,7 @@ def verificar_elegibilidad_devolucion(pedido_id, producto_id):
         }
 
     admite_devolucion = str(
-        producto["Admite devolución"]
+        producto["admite_devolucion"]
     ).strip().lower()
 
     if admite_devolucion not in ["sí", "si", "true"]:
@@ -116,7 +116,7 @@ def verificar_elegibilidad_devolucion(pedido_id, producto_id):
             "elegible": False,
             "motivo": (
                 f"El producto no admite devolución. "
-                f"Condición: {producto['Condición de devolución']}."
+                f"Condición: {producto['condicion_devolucion']}."
             )
         }
 
@@ -128,6 +128,6 @@ def verificar_elegibilidad_devolucion(pedido_id, producto_id):
         ),
         "pedido_id": pedido["pedido_id"],
         "producto_id": producto_id,
-        "producto": producto["Nombre del producto"],
-        "categoria": producto["Categoría"]
+        "producto": producto["nombre_producto"],
+        "categoria": producto["categoria"]
     }
