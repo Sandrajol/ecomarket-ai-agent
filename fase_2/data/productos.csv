@@ -1,0 +1,11 @@
+codigo_producto,nombre_producto,categoria,disponibilidad,admite_devolucion,condicion_devolucion
+P001,Botella reutilizable de acero inoxidable,Hogar sostenible,Disponible,Si,Debe estar sin uso y en su empaque original
+P002,Cepillo de dientes de bambú,Higiene personal,Disponible,No,Producto de higiene personal
+P003,Bolsa reutilizable de algodón,Accesorios sostenibles,Disponible,Si,Debe estar sin uso y conservar etiquetas
+P004,Crema corporal natural,Higiene personal,Disponible,No,No se acepta devolución si el producto fue abierto
+P005,Set de cubiertos de bambú,Hogar sostenible,Disponible,Si,Debe estar completo y sin uso
+P006,Jabón artesanal,Higiene personal,Disponible,No,No se acepta devolución si el empaque fue abierto
+P007,Café orgánico,Alimentos,Disponible,No,Producto perecedero
+P008,Cuaderno de papel reciclado,Papelería sostenible,Disponible,Si,Debe estar sin uso
+P009,Camiseta de algodón orgánico,Ropa sostenible,Disponible,Si,Debe conservar etiquetas y estar sin uso
+P010,Frutas orgánicas surtidas,Alimentos,Disponible,No,Producto perecedero
