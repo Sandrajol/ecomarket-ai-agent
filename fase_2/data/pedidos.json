@@ -1,1 +1,66 @@
-
+[
+  {
+    "pedido_id": "ECO1001",
+    "producto_id": "P001",
+    "fecha_compra": "2026-10-10",
+    "fecha_entrega": "2026-10-13",
+    "estado": "Entregado",
+    "cliente": "Cliente 001"
+  },
+  {
+    "pedido_id": "ECO1002",
+    "producto_id": "P002",
+    "fecha_compra": "2026-10-08",
+    "fecha_entrega": "2026-10-11",
+    "estado": "Entregado",
+    "cliente": "Cliente 002"
+  },
+  {
+    "pedido_id": "ECO1003",
+    "producto_id": "P007",
+    "fecha_compra": "2026-10-15",
+    "fecha_entrega": "2026-10-18",
+    "estado": "Entregado",
+    "cliente": "Cliente 003"
+  },
+  {
+    "pedido_id": "ECO1004",
+    "producto_id": "P009",
+    "fecha_compra": "2026-08-20",
+    "fecha_entrega": "2026-08-24",
+    "estado": "Entregado",
+    "cliente": "Cliente 004"
+  },
+  {
+    "pedido_id": "ECO1005",
+    "producto_id": "P005",
+    "fecha_compra": "2026-10-20",
+    "fecha_entrega": "2026-10-23",
+    "estado": "Entregado",
+    "cliente": "Cliente 005"
+  },
+  {
+    "pedido_id": "ECO1006",
+    "producto_id": "P008",
+    "fecha_compra": "2026-10-22",
+    "fecha_entrega": null,
+    "estado": "En tránsito",
+    "cliente": "Cliente 006"
+  },
+  {
+    "pedido_id": "ECO1007",
+    "producto_id": "P010",
+    "fecha_compra": "2026-10-17",
+    "fecha_entrega": "2026-10-20",
+    "estado": "Entregado",
+    "cliente": "Cliente 007"
+  },
+  {
+    "pedido_id": "ECO1008",
+    "producto_id": "P003",
+    "fecha_compra": "2026-10-05",
+    "fecha_entrega": "2026-10-09",
+    "estado": "Entregado",
+    "cliente": "Cliente 008"
+  }
+]
