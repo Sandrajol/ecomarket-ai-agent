@@ -131,3 +131,47 @@ def verificar_elegibilidad_devolucion(pedido_id, producto_id):
         "producto": producto["nombre_producto"],
         "categoria": producto["categoria"]
     }
+
+def generar_etiqueta_devolucion(pedido_id, producto_id):
+    """
+    Genera una etiqueta de devolución únicamente si el producto
+    es elegible para devolución.
+    """
+
+    resultado_elegibilidad = verificar_elegibilidad_devolucion(
+        pedido_id,
+        producto_id
+    )
+
+    if not resultado_elegibilidad["elegible"]:
+        return {
+            "generada": False,
+            "motivo": (
+                "No se puede generar la etiqueta porque la devolución "
+                "no fue aprobada. "
+                + resultado_elegibilidad["motivo"]
+            )
+        }
+
+    codigo_devolucion = f"ECO-RETURN-{pedido_id}-{producto_id}"
+
+    etiqueta = {
+        "codigo_devolucion": codigo_devolucion,
+        "pedido_id": pedido_id,
+        "producto_id": producto_id,
+        "producto": resultado_elegibilidad["producto"],
+        "categoria": resultado_elegibilidad["categoria"],
+        "transportadora": "Servientrega",
+        "destino": "Centro de Devoluciones EcoMarket",
+        "estado": "AUTORIZADA"
+    }
+
+    return {
+        "generada": True,
+        "mensaje": "Etiqueta de devolución generada correctamente.",
+        "etiqueta": etiqueta
+    }
+
+
+
+
