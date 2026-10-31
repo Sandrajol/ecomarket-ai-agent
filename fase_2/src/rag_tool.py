@@ -138,6 +138,56 @@ def crear_retriever(vectorstore):
         search_kwargs={"k": 3}
     )
 
+# Retriever reutilizable para evitar reconstruir ChromaDB
+# cada vez que el agente realiza una consulta.
+_retriever_global = None
+
+
+def obtener_retriever():
+    """
+    Inicializa el sistema RAG una sola vez y reutiliza
+    el retriever en las siguientes consultas.
+    """
+
+    global _retriever_global
+
+    if _retriever_global is None:
+        documentos = cargar_base_conocimiento()
+        chunks = crear_chunks(documentos)
+        vectorstore = crear_vectorstore(chunks)
+        _retriever_global = crear_retriever(vectorstore)
+
+    return _retriever_global
+
+
+def consultar_conocimiento_ecomarket(pregunta):
+    """
+    Recupera información relevante de la base de conocimiento
+    de EcoMarket para una consulta del usuario.
+    """
+
+    retriever = obtener_retriever()
+
+    documentos_recuperados = retriever.invoke(pregunta)
+
+    if not documentos_recuperados:
+        return (
+            "No se encontró información relevante en la base "
+            "de conocimiento de EcoMarket."
+        )
+
+    contexto = []
+
+    for documento in documentos_recuperados:
+        fuente = documento.metadata.get("fuente", "Fuente desconocida")
+
+        contexto.append(
+            f"Fuente: {fuente}\n"
+            f"{documento.page_content}"
+        )
+
+    return "\n\n".join(contexto)
+
     return retriever
 
 
