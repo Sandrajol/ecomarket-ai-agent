@@ -190,7 +190,6 @@ def consultar_conocimiento_ecomarket(pregunta):
 
     return "\n\n".join(contexto)
 
-    return retriever
 
 
 
