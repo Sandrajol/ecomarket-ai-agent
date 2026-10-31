@@ -138,6 +138,8 @@ def crear_retriever(vectorstore):
         search_kwargs={"k": 3}
     )
 
+    return retriever
+
 # Retriever reutilizable para evitar reconstruir ChromaDB
 # cada vez que el agente realiza una consulta.
 _retriever_global = None
