@@ -95,3 +95,54 @@ def cargar_base_conocimiento():
         )
 
     return documentos
+
+def crear_chunks(documentos):
+    """
+    Divide los documentos en fragmentos pequeños para
+    facilitar la recuperación semántica.
+    """
+
+    text_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=500,
+        chunk_overlap=80
+    )
+
+    chunks = text_splitter.split_documents(documentos)
+
+    return chunks
+
+def crear_vectorstore(chunks):
+    """
+    Genera embeddings y crea la base vectorial ChromaDB.
+    """
+
+    embeddings = HuggingFaceEmbeddings(
+        model_name="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    )
+
+    vectorstore = Chroma.from_documents(
+        documents=chunks,
+        embedding=embeddings,
+        collection_name="ecomarket"
+    )
+
+    return vectorstore
+
+def crear_retriever(vectorstore):
+    """
+    Configura el retriever para recuperar los tres
+    fragmentos más relevantes.
+    """
+
+    retriever = vectorstore.as_retriever(
+        search_kwargs={"k": 3}
+    )
+
+    return retriever
+
+
+
+
+
+
+
