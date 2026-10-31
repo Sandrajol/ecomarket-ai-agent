@@ -1,0 +1,30 @@
+[
+  {
+    "pregunta": "¿Qué medios de pago acepta EcoMarket?",
+    "respuesta": "EcoMarket acepta tarjetas débito, tarjetas crédito y pagos electrónicos habilitados en la plataforma."
+  },
+  {
+    "pregunta": "¿Cómo puedo consultar el estado de mi pedido?",
+    "respuesta": "El cliente puede consultar el estado de su pedido utilizando el número de seguimiento proporcionado después de la compra."
+  },
+  {
+    "pregunta": "¿Puedo cancelar un pedido?",
+    "respuesta": "Un pedido puede cancelarse si todavía no ha sido despachado."
+  },
+  {
+    "pregunta": "¿Puedo modificar un pedido después de realizar la compra?",
+    "respuesta": "Los cambios dependen del estado del pedido. Si todavía no ha sido procesado, el cliente debe contactar al equipo de atención."
+  },
+  {
+    "pregunta": "¿Cuánto tarda normalmente un envío?",
+    "respuesta": "El tiempo de entrega depende de la ciudad de destino y de la transportadora asignada."
+  },
+  {
+    "pregunta": "¿Qué hago si mi pedido está retrasado?",
+    "respuesta": "El cliente debe consultar el enlace de seguimiento. Si el pedido supera el tiempo estimado, puede contactar al equipo de atención."
+  },
+  {
+    "pregunta": "¿Cómo contacto al equipo de atención al cliente?",
+    "respuesta": "El cliente puede utilizar la sección de ayuda disponible en la plataforma de EcoMarket."
+  }
+]
