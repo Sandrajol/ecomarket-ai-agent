@@ -43,8 +43,8 @@ st.write(
 @st.cache_resource
 def inicializar_agente():
     modelo = ChatGoogleGenerativeAI(
-        model="gemini-3-flash-preview",
-        temperature=0
+    model="gemini-2.5-flash-lite",
+    temperature=0
     )
 
     return crear_agente(modelo)
